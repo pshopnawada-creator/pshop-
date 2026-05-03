@@ -1,32 +1,72 @@
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Opening Website...</title>
-    
-    <script>
-        // JS Code: HTML page load hote hi yeh function run hoga
-        window.onload = function() {
-            // Yeh aapke link ko turant open kar dega
-            window.location.href = "https://019decfc-030c-7049-b3e1-b3b0b52f4e7c.arena.site/";
-        };
-    </script>
-
+    <title>Web App Loading...</title>
     <style>
+        /* Modern Design and Centering */
         body {
-            background-color: #222;
-            color: #fff;
-            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: radial-gradient(circle, #1a1a2e 0%, #16213e 100%);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: white;
+            overflow: hidden;
+        }
+
+        .container {
             text-align: center;
-            margin-top: 20%;
+        }
+
+        /* Loading Spinner */
+        .loader {
+            border: 4px solid rgba(255, 255, 255, 0.1);
+            border-left-color: #00d2ff;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 20px;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        h2 {
+            font-weight: 300;
+            letter-spacing: 1px;
+            animation: pulse 1.5s infinite ease-in-out;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 0.6; }
+            50% { opacity: 1; }
         }
     </style>
+
+    <script>
+        // JS se auto-open logic
+        window.onload = function() {
+            // 1 second ka delay taaki animation dikhe, phir open ho
+            setTimeout(function() {
+                window.location.href = "https://019decfc-030c-7049-b3e1-b3b0b52f4e7c.arena.site/";
+            }, 1200); 
+        };
+    </script>
 </head>
 <body>
 
-    
+    <div class="container">
+        <div class="loader"></div>
+        <h2>App Khul Raha Hai...</h2>
+        <p style="font-size: 12px; color: #aaa;">Kripya thoda intezar karein</p>
+    </div>
 
 </body>
 </html>
